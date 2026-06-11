@@ -1,1 +1,51 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[106.08892402300006,-2.144537464999928],[106.17806384500005,-2.148042111999928],[106.15805294800003,-2.088202763999959],[106.12916636800009,-2.057445825999935],[106.08851446200003,-2.077727952999965],[106.04073105000003,-2.079564861999927],[106.04017389700005,-2.113271966999946],[106.08892402300006,-2.144537464999928]]]},"properties":{"OBJECTID":58948,"NAMOBJ":"Air Itam","FCODE":"BA03070040","REMARK":null,"METADATA":"TASWIL1000020221227_DATA_BATAS_DESAKELURAHAN","SRS_ID":"4326","KDBBPS":null,"KDCBPS":null,"KDCPUM":"19.71.01","KDEBPS":null,"KDEPUM":"19.71.01.1007","KDPBPS":null,"KDPKAB":"19.71","KDPPUM":"19","LUASWH":0,"TIPADM":2,"WADMKC":"Bukitintan","WADMKD":"Air Itam","WADMKK":"Kota Pangkal Pinang","WADMPR":"Kepulauan Bangka Belitung","WIADKC":null,"WIADKK":null,"WIADPR":null,"WIADKD":"0","UUPP":"Hasil Delineasi Batas Desa 2019","LUAS":3.51244047}}]}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [106.08892402300006, -2.144537464999928],
+            [106.17806384500005, -2.148042111999928],
+            [106.15805294800003, -2.088202763999959],
+            [106.12916636800009, -2.057445825999935],
+            [106.08851446200003, -2.077727952999965],
+            [106.04073105000003, -2.079564861999927],
+            [106.04017389700005, -2.113271966999946],
+            [106.08892402300006, -2.144537464999928]
+          ]
+        ]
+      },
+      "properties": {
+        "OBJECTID": 58948,
+        "NAMOBJ": "Air Itam",
+        "FCODE": "BA03070040",
+        "REMARK": null,
+        "METADATA": "TASWIL1000020221227_DATA_BATAS_DESAKELURAHAN",
+        "SRS_ID": "4326",
+        "KDBBPS": null,
+        "KDCBPS": null,
+        "KDCPUM": "19.71.01",
+        "KDEBPS": null,
+        "KDEPUM": "19.71.01.1007",
+        "KDPBPS": null,
+        "KDPKAB": "19.71",
+        "KDPPUM": "19",
+        "LUASWH": 0,
+        "TIPADM": 2,
+        "WADMKC": "Bukitintan",
+        "WADMKD": "Air Itam",
+        "WADMKK": "Kota Pangkal Pinang",
+        "WADMPR": "Kepulauan Bangka Belitung",
+        "WIADKC": null,
+        "WIADKK": null,
+        "WIADPR": null,
+        "WIADKD": "0",
+        "UUPP": "Hasil Delineasi Batas Desa 2019",
+        "LUAS": 3.51244047
+      }
+    }
+  ]
+}
