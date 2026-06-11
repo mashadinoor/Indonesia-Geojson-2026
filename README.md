@@ -1,15 +1,89 @@
-# GeoJSON Indonesia - 38 Provinsi
+# 🗺️ GeoJSON Indonesia — 38 Provinsi
 
-Repo ini menyediakan data GeoJSON untuk 38 provinsi di Indonesia, mencakup batas administrasi hingga level provinsi, kabupaten, kecamatan, dan kelurahan. Data ini berguna untuk keperluan visualisasi geografis, analisis spasial, dan pengembangan aplikasi GIS yang memerlukan data batas wilayah administratif di Indonesia.
+> Fork dari [ardian28/GeoJson-Indonesia-38-Provinsi](https://github.com/ardian28/GeoJson-Indonesia-38-Provinsi) dengan perbaikan data dan restrukturisasi folder.
 
-## Struktur Data
+---
 
-- **Provinsi**: GeoJSON berisi batas wilayah untuk 38 provinsi di Indonesia.
-- **Kabupaten/Kota**: GeoJSON berisi batas wilayah untuk setiap kabupaten/kota di Indonesia, terstruktur di dalam setiap provinsi.
-- **Kecamatan**: GeoJSON berisi batas wilayah kecamatan dalam setiap kabupaten/kota.
-- **Kelurahan**: GeoJSON berisi batas wilayah kelurahan dalam setiap kecamatan.
+## 📁 Struktur
 
-## Sumber Data
+```
+├── 📂 Provinsi/
+│   ├── Aceh.json
+│   ├── Bali.json
+│   └── ...  (38 file)
+└── 📂 Kabupaten/
+    ├── 📂 Aceh/
+    │   ├── Kabupaten_Aceh_Barat.json
+    │   ├── Kabupaten_Aceh_Besar.json
+    │   └── ...
+    ├── 📂 Bali/
+    │   ├── Kabupaten_Badung.json
+    │   ├── Kota_Denpasar.json
+    │   └── ...
+    └── ...  (38 subfolder)
+```
 
-Data SHP diambil dari Badan Informasi GeoSpasial geoservice.big.go.id
+Setiap file adalah GeoJSON valid dengan format:
 
+```json
+{
+  "type": "FeatureCollection",
+  "features": [ ... ]
+}
+```
+
+---
+
+## ✨ Perubahan dari repo asli
+
+### 🔧 Fix: `KODE_PROV` duplikat provinsi Papua
+
+Repo asli memiliki `KODE_PROV` yang duplikat untuk 6 provinsi hasil pemekaran Papua. Telah diperbaiki sesuai **Kepmendagri No. 100.1.1-6117 Tahun 2022**:
+
+| Provinsi         |   Sebelum   |  Sesudah  |
+| ---------------- | :---------: | :-------: |
+| Papua            | ❌ duplikat | ✅ **91** |
+| Papua Barat      | ❌ duplikat | ✅ **92** |
+| Papua Selatan    | ❌ duplikat | ✅ **93** |
+| Papua Tengah     | ❌ duplikat | ✅ **94** |
+| Papua Pegunungan | ❌ duplikat | ✅ **95** |
+| Papua Barat Daya | ❌ duplikat | ✅ **96** |
+
+📎 Referensi: [Provinsi di Indonesia — Wikipedia](https://id.wikipedia.org/wiki/Provinsi_di_Indonesia)
+
+### 📂 Restrukturisasi folder
+
+- **Provinsi** → satu file `.json` per provinsi
+- **Kabupaten** → subfolder per provinsi, satu file per kabupaten/kota dengan prefix `Kabupaten_` atau `Kota_`
+
+---
+
+## 🗃️ Sumber Data
+
+| Sumber                                                                                                                                       | Keterangan            |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| [Badan Informasi Geospasial (BIG)](https://geoservice.big.go.id)                                                                             | Data geometri wilayah |
+| [Kepmendagri No. 100.1.1-6117 Tahun 2022](https://upload.wikimedia.org/wikipedia/commons/9/93/Kepmendagri_Nomor_100.1.1-6117_Tahun_2022.pdf) | Kode wilayah resmi    |
+
+---
+
+## 🤝 Berkontribusi
+
+Kontribusi sangat disambut! Jika kamu menemukan data yang tidak akurat, kode wilayah yang salah, atau ingin menambahkan peningkatan lainnya:
+
+1. **Laporkan issue** — Temukan kesalahan data atau bug? Buka [Issue baru](../../issues/new) dan jelaskan masalahnya sedetail mungkin.
+2. **Ajukan perubahan** — Fork repo ini, buat perubahan, lalu buka Pull Request.
+3. **Diskusi** — Punya ide atau pertanyaan? Gunakan tab [Discussions](../../discussions) untuk berdiskusi.
+
+Beberapa hal yang bisa dikontribusikan:
+
+- 🐛 Fix data geometri yang tidak akurat
+- 🏷️ Koreksi nama atau kode wilayah
+- 📝 Perbaikan dokumentasi
+- ⭐ Ide fitur atau struktur data baru
+
+---
+
+## 📄 Lisensi
+
+MIT — sama dengan repo asli. Kredit ke [ardian28](https://github.com/ardian28).
