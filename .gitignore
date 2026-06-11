@@ -1,0 +1,3 @@
+# Ignore a single specific Python file
+merge-kabupaten.py
+merge-provinsi.py
